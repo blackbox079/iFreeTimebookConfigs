@@ -4,6 +4,12 @@
 
 ### 字符和正则
 
+- `@str:pos(请记住本书首发域).pos(名：booktxt.net。顶点小说手机版阅读网址：m.booktxt.net).mark(3).replace(@mark[0])`
+
+### @comb
+
+- `@comb:@json:tags`
+
 ### @dyn
 
 当前小配置中添加新的处理：
