@@ -35,16 +35,31 @@
 
 - bookName 书名
 - author 作者
+- desc 简介
+- coverUrl 封面
 - statusText 状态
 - typeText 类型
-- desc 简介
+- wordCount 字数
+- tags 标签
 - lastUpdateDate 书籍更新时间
-- coverUrl 封面
 - helpId 辅助信息
 - lastChapterTitle 最后章节标题
+- helpIdKey 书源名
+- helpIdValue 辅助信息
 
-#### 列表详情
+来源信息
+- detailURL 书籍详情地址
+- dirURL 章节目录地址
+- heldId 辅助信息
+
+#### 书海配置
+
+#### 列表详情 Chapter
 
 - lastUpdateDate 更新时间
 - title 文章标题
 - url 文章地址
+
+#### 章节详情
+
+#### 书籍详情
