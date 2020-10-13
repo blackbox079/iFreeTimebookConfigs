@@ -41,9 +41,13 @@
 
 ### 地址
 - `@dyn:hid=source.helpId;format('http://api.aixdzs.com/content-ios/%@', hid);`
+- `@dyn:u=source.helpId; check(!u,return nil); format('http://free.ilemi.cn/v1/api/book/chapter/list?&bookId=%@',u)`
 
 ### lastUpdateDate 更新时间
 ### title 文章标题
+
+- `@regex:[（［【\[\{\(].*?[更合字修费求票赏鲜盟推歉谢祝节年补抢章回贺捉虫乐修告改].*?[）］】\]\}\)] @=>`
+
 ### url 文章地址
 
 - `@dyn:b=content;check(!b,return nil);format('http://app-ios-cdn.jjwxc.net/iosapi/chapterList?more=0&novelId=%@&whole=1',b)`
