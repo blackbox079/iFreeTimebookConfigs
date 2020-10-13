@@ -1,65 +1,79 @@
-# 爱阅书香书源编写备忘录
+# 书源编写备忘录
 
-## 信息处理
+## 书籍搜索 Source
 
-### 字符和正则
+常用字段：书名，作者，简介，封面，字数，状态，类型
 
-- `@str:pos(请记住本书首发域).pos(名：booktxt.net。顶点小说手机版阅读网址：m.booktxt.net).mark(3).replace(@mark[0])`
-
-### @comb
-
-- `@comb:@json:tags`
-
-### @dyn
-
-当前小配置中添加新的处理：
+### bookName 书名
+### author 作者
+### desc 简介
 
 - `@dyn:a=content;check(!a,return nil);format('http://app-ios-cdn.jjwxc.net/iosapi/novelbasicinfo?novelId=%@',a)` 
+- `@comb:@json:tags`
+
+### coverUrl 封面
+
+- `@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http://img22.aixdzs.com/%@', u)`
+
+### statusText 状态
+
+- `@regex:连载中 @=>连载`
+- `@regex:已完结 @=>完结`
+
+### typeText 类型
+### wordCount 字数
+### tags 标签
+### lastUpdateDate 书籍更新时间
+### helpId 辅助信息
+### lastChapterTitle 最后章节标题
+
+- `@regex:更新到: @=>`
+
+### helpIdKey 书源名
+### helpIdValue 辅助信息
+### detailURL 书籍详情地址
+### dirURL 章节目录地址
+### heldId 辅助信息
+
+## 书海配置
+
+## 列表详情 Chapter
+
+### 地址
+- `@dyn:hid=source.helpId;format('http://api.aixdzs.com/content-ios/%@', hid);`
+
+### lastUpdateDate 更新时间
+### title 文章标题
+### url 文章地址
+
 - `@dyn:b=content;check(!b,return nil);format('http://app-ios-cdn.jjwxc.net/iosapi/chapterList?more=0&novelId=%@&whole=1',b)`
 
-从别的小配置中引用：
-- `@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http://img22.aixdzs.com/%@', u)`
-- `@dyn:hid=source.helpId;format('http://api.aixdzs.com/content-ios/%@', hid);`
-- `@dyn:u=chapter.url;format('http://api.aixdzs.com/chapter/%@', u);`
+## 章节详情
 
-## 净化规则
+### 地址
 
+
+### content
+
+- `@str:pos(请记住本书首发域).pos(名：booktxt.net。顶点小说手机版阅读网址：m.booktxt.net).mark(3).replace(@mark[0])`
 - `(?s)感谢在.*期间.*营养液.*我会继续努力的！ @=>`
 
+## 书籍详情
 
-## 附录
+### 地址
 
-### 字段名
+- `@dyn:hid=source.helpId;format('http://api.aixdzs.com/book/%@', hid);`
 
-#### 书籍搜索 Source
+### bookName 书名
 
-- bookName 书名
-- author 作者
-- desc 简介
-- coverUrl 封面
-- statusText 状态
-- typeText 类型
-- wordCount 字数
-- tags 标签
-- lastUpdateDate 书籍更新时间
-- helpId 辅助信息
-- lastChapterTitle 最后章节标题
-- helpIdKey 书源名
-- helpIdValue 辅助信息
+### cover
 
-来源信息
-- detailURL 书籍详情地址
-- dirURL 章节目录地址
-- heldId 辅助信息
+- `@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http://img22.aixdzs.com/%@', u)`
 
-#### 书海配置
-
-#### 列表详情 Chapter
-
-- lastUpdateDate 更新时间
-- title 文章标题
-- url 文章地址
-
-#### 章节详情
-
-#### 书籍详情
+### statusText 状态
+### typeText 类型
+### wordCount 字数
+### tags 标签
+### lastUpdateDate 书籍更新时间
+### helpId 辅助信息
+### lastChapterTitle 最后章节标题
