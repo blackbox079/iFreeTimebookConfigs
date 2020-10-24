@@ -19,7 +19,7 @@
 1. 在App Store下载安装 [爱阅书香](https://apps.apple.com/cn/app/%E7%88%B1%E9%98%85%E4%B9%A6%E9%A6%99/id1137819437)
 2. 导入书源
 
-## 列表
+## [书源列表](LIST.md)
 
 ## 最近更新
 
