@@ -1,5 +1,7 @@
 # README
 
+[![GitHub Star](https://img.shields.io/github/stars/blackbox079/iFreeTimebookConfigs?style=social)](https://github.com/blackbox079/iFreeTimebookConfigs) [![MIT Licence](https://img.shields.io/github/license/blackbox079/iFreeTimebookConfigs)](https://github.com/blackbox079/iFreeTimebookConfigs/blob/main/LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![GitHub Commit](https://img.shields.io/github/last-commit/blackbox079/iFreeTimebookConfigs)](https://github.com/blackbox079/iFreeTimebookConfigs/commits/main) [![GitHub Releases](https://img.shields.io/github/v/release/blackbox079/iFreeTimebookConfigs?style=plastic)](https://github.com/blackbox079/iFreeTimebookConfigs/releases)
+
 ## 简介
 
 这里是爱阅书香的书源分享，以耽美为主。
