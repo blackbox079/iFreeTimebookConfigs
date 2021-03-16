@@ -4,9 +4,9 @@ module.exports = {
         { value: 'update', name: 'update:     更新规则' },
         { value: 'weight', name: 'weight:     更新权重或分组' },
         { value: 'del', name: 'del:     移除书源' },
-        { value: 'name', name: 'name:     网站名称或域名变更后的文件名更新' },
+        { value: 'name', name: 'name:     文件名更新（网站名称或域名）' },
         { value: 'docs', name: 'docs:     文档更新' },
-        { value: 'other', name: 'other:     其他更新' }
+        { value: 'other', name: 'other:     其他变动' }
     ],
 
     // scopes: [
@@ -37,18 +37,18 @@ module.exports = {
         type: '选择你要提交的类型：',
         scope: '\n选择变动范围(可选):',
         // used if allowCustomScopes is true
-        customScope: '请输入自定义的scope：',
+        customScope: '请说明变动范围：',
         subject: '请填写概括：\n',
         body: '添加一个更加详细的描述（可选）\n',
         breaking: '列举重大的变更 (可选):\n',
-        footer: '列出本次关闭的ISSUES，例如： #31, #34:\n',
+        footer: '列出本次关闭的ISSUES，例如：#31, #34:\n',
         confirmCommit: '确认提交？'
     },
 
     allowCustomScopes: true,
     allowBreakingChanges: ['feat', 'update', 'del'],
     // skip any questions you want
-    skipQuestions: ['body'],
+    // skipQuestions: ['body'],
 
     // limit subject length
     subjectLimit: 100
