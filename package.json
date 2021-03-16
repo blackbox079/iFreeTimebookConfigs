@@ -1,0 +1,30 @@
+{
+    "name": "ifreetimebookconfigs",
+    "version": "0.2.210307",
+    "description": "爱阅书香书源",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/blackbox079/iFreeTimebookConfigs.git"
+    },
+    "author": "卷尾松鼠",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/blackbox079/iFreeTimebookConfigs/issues"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        },
+        "cz-customizable": {
+            "config": ".cz-config.js"
+        }
+    },
+    "homepage": "https://github.com/blackbox079/iFreeTimebookConfigs#readme",
+    "devDependencies": {
+        "cz-customizable": "^6.3.0"
+    }
+}
