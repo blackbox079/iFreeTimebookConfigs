@@ -2,9 +2,8 @@ module.exports = {
     types: [
         { value: 'feat', name: 'feat:     新增书源' },
         { value: 'update', name: 'update:     更新规则' },
-        { value: 'weight', name: 'weight:     更新权重或分组' },
         { value: 'del', name: 'del:     移除书源' },
-        { value: 'name', name: 'name:     文件名更新（网站名称或域名）' },
+        { value: 'name', name: 'name:     文件名更新' },
         { value: 'docs', name: 'docs:     文档更新' },
         { value: 'other', name: 'other:     其他变动' }
     ],
